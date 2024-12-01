@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dmlohv002j8rw"]
 
-[ext_resource type="Texture2D" uid="uid://cb5suyu343d1n" path="res://decorating_assets/environment/back.png" id="1_macjf"]
+[ext_resource type="Texture2D" uid="uid://p6aqgpoeuhum" path="res://Emperator_sprites/bosque_blade.png" id="1_wjdla"]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
 
@@ -8,6 +8,15 @@
 motion_mirroring = Vector2(675, 0)
 
 [node name="Back" type="Sprite2D" parent="ParallaxLayer"]
-position = Vector2(336, 192)
-scale = Vector2(1.76042, 1.59167)
-texture = ExtResource("1_macjf")
+position = Vector2(480, 359)
+scale = Vector2(1.62602, 1.91)
+texture = ExtResource("1_wjdla")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Node2D" type="Node2D" parent="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="Node2D/Node2D"]
+
+[node name="Node2D2" type="Node2D" parent="."]
+position = Vector2(-5, -3)

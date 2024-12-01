@@ -1,3 +1,15 @@
-res://egypt.tscn
+res://emperator_player/emperator_player.tscn
+res://prueba_print.tscn
+res://enemies_player.tscn
+res://ground.tscn
 res://player/player.tscn
+res://egypt.tscn
+res://main.tscn
 res://bg.tscn
+res://player/player.gd
+res://text_blade.tscn
+res://main.gd
+res://button_2?.tscn
+res://emperator_player/emperator_player.gd
+res://enemies_player.gd
+res://prueba_print.gd

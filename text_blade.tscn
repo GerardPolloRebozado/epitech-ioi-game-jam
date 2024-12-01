@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://qi5n7ghvkfbk"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 2714.0
+offset_bottom = 548.0
+text = "In ages past, there reigned a fearsome 
+emperor named Blade, whose legend inspired the tale of Dracula. A warrior of unmatched skill, he filled a
+ dark forest with the bodies of his vanquished foes. Each enemy he defeated was impaled upon a tree,
+ their lifeless forms serving as a grim reminder of his power and wrath."

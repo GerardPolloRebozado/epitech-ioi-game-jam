@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="ioi-game-jam"
-run/main_scene="res://egypt.tscn"
+run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
+
+[dotnet]
+
+project/assembly_name="ioi-game-jam"
 
 [editor]
 
@@ -24,3 +28,4 @@ version_control/autoload_on_startup=true
 
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
+textures/vram_compression/import_s3tc_bptc=true

@@ -1,0 +1,73 @@
+[gd_scene load_steps=12 format=3 uid="uid://csdryc4ifp0qn"]
+
+[ext_resource type="Script" path="res://emperator_player/emperator_player.gd" id="1_rdvmi"]
+[ext_resource type="Texture2D" uid="uid://cimmrdlik86ti" path="res://Emperator_sprites/Individual Sprites/king_sprite_attack_1-removebg-preview.png" id="2_gucbg"]
+[ext_resource type="Texture2D" uid="uid://cqdpvqn7haqdk" path="res://Emperator_sprites/Individual Sprites/king_sprite_attack_2_small-removebg-preview.png" id="3_og7xa"]
+[ext_resource type="Texture2D" uid="uid://dmhxp6bjen0b7" path="res://Emperator_sprites/Individual Sprites/king_sprite_idle_1-removebg-preview.png" id="4_ey37n"]
+[ext_resource type="Texture2D" uid="uid://laslvwq6rmuh" path="res://Emperator_sprites/Individual Sprites/king_sprite_idle_2-removebg-preview.png" id="5_0g0l4"]
+[ext_resource type="Texture2D" uid="uid://brjuqtr5w3cig" path="res://Emperator_sprites/Individual Sprites/king_sprite_idle_3-removebg-preview.png" id="6_xetgp"]
+[ext_resource type="Texture2D" uid="uid://cvnktdgj06co6" path="res://Emperator_sprites/Individual Sprites/king_sprite_walk_1-removebg-preview.png" id="7_2b6qi"]
+[ext_resource type="Texture2D" uid="uid://ba3p21r8oqja2" path="res://Emperator_sprites/Individual Sprites/king_sprite_walk_2-removebg-preview.png" id="8_81rso"]
+[ext_resource type="Texture2D" uid="uid://bsfgodo647x67" path="res://Emperator_sprites/Individual Sprites/king_sprite_walk_3-removebg-preview.png" id="9_jsfbk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7kftq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gucbg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_og7xa")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ey37n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_0g0l4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xetgp")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_2b6qi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_81rso")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_jsfbk")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u4qyv"]
+radius = 28.0
+height = 84.0
+
+[node name="emperator" type="CharacterBody2D"]
+position = Vector2(-1, 0)
+collision_mask = 3
+script = ExtResource("1_rdvmi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -24.125)
+scale = Vector2(0.415, 0.46875)
+sprite_frames = SubResource("SpriteFrames_7kftq")
+animation = &"attack"
+frame_progress = 0.718363
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -16)
+shape = SubResource("CapsuleShape2D_u4qyv")
